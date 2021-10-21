@@ -267,12 +267,12 @@ void wJsonEdit(char* path, int index, char* newValue)
 char ***rJson(char* path)
 {
 	FILE *file;
-	if ((file = fopen(path, "r")) == NULL) { printf("\033[0;31mError while opening file\n\033[0m"); return malloc(0); }
+	if ((file = fopen(path, "r")) == NULL) { printf("\033[0;31mError while opening file\n\033[0m"); return (char ***) malloc(0); }
 	int length = fileLength(path);
 
-	char ***str = malloc(length);
-	char **groups = malloc(length);
-	char *s = malloc(length);
+	char ***str = (char ***) malloc(length);
+	char **groups = (char **) malloc(length);
+	char *s = (char *) malloc(length);
 	char ch;
 	int n = 0, num = 0, i;
 
@@ -297,14 +297,14 @@ char ***rJson(char* path)
 				// Add s to groups
 				s[i] = '\0';
 				groups[n] = s;
-				s  = malloc(length);
+				s  = (char *) malloc(length);
 				n++;
 
 				// Add group to str
 				if(n > 1)
 				{ 
 					str[num] = groups;
-					groups = malloc(length);
+					groups = (char **) malloc(length);
 					n = 0;
 					num++;
 				}
