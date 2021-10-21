@@ -3,7 +3,7 @@
 #include <stdbool.h>				// Bool library
 #include <string.h>					// String library
 
-bool fe(char* path)
+bool fileExsit(char* path)
 {
 	FILE *file;
 	if ((file = fopen(path, "r")) == NULL) return false;
