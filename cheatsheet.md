@@ -1,4 +1,5 @@
 # extra functions / used with the others
+bool fileExsit(char* path)                                              // checks if the file exsists
 int fileLength(char* path)							                    // Returns the length of the file
 int jsonLength(char* path)							                    // Returns the amout of elements in the json (based on the ":")
 void wjsonClear(char* path)							                    // Clears the json
