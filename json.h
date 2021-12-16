@@ -1,13 +1,13 @@
-#include <stdlib.h>                 			// Standard library
+#include <stdlib.h>                 // Standard library
 #include <stdio.h>					// C library
-#include <stdbool.h>					// Bool library
+#include <stdbool.h>				// Bool library
 #include <string.h>					// String library
 
 // path example: "file.json"
 // wjsonClear will create the file if it doesn't exist
-// rJsonFindInd is made so you can use the name instaed of manualy finding the index when using for example wJsonEdit and wJsonDelete
+// rJsonFindInd is made so you can use the name instead of manually finding the index when using for example wJsonEdit and wJsonDelete
 // jsonEmpty checks for "
-// jsonLength is based on the : seperating the name from the value
+// jsonLength is based on the : separating the name from the value
 
 bool fileExsit(char* path)
 {
