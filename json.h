@@ -1,13 +1,19 @@
-#include <stdlib.h>                 // Standard library
-#include <stdio.h>					// C library
-#include <stdbool.h>				// Bool library
-#include <string.h>					// String library
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 
-// path example: "file.json"
-// wjsonClear will create the file if it doesn't exist
-// rJsonFindInd is made so you can use the name instead of manually finding the index when using for example wJsonEdit and wJsonDelete
-// jsonEmpty checks for "
-// jsonLength is based on the : separating the name from the value
+/*-----------------------------------------------------------------------------------------
+|
+|	Cjson made by Emil Bjorkeng
+|
+|	An example of a path would be: "folder/file.json"
+|	wjsonClear will create the file if it doesn't exist
+|	rJsonFindInd is made so you can use the name instead of manually finding the index when using for example wJsonEdit or wJsonDelete
+|	jsonEmpty determents if the json is empty by looking for the " character
+|	jsonLength is based on the : character separating the name from the value
+|
+-----------------------------------------------------------------------------------------*/
 
 bool fileExsit(char* path)
 {
